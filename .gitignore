@@ -55,6 +55,7 @@ cover/
 *.mo
 *.pot
 .DS_Store
+.aws/
 
 # Django stuff:
 *.log
