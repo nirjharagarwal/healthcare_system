@@ -1,5 +1,5 @@
 import streamlit as st
-from upload_and_process import upload_to_s3, start_textract_job, get_textract_results
+from src.upload_and_process import upload_to_s3, start_textract_job, get_textract_results
 
 # Set up the Streamlit page
 st.title("PDF Upload and Textract Processing")
