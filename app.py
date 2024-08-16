@@ -1,4 +1,6 @@
 import streamlit as st
+import pickle
+import datetime
 from src.upload_and_process import upload_to_s3, start_textract_job, get_textract_results
 
 # Set up the Streamlit page
@@ -26,6 +28,13 @@ if uploaded_file is not None:
         
         # Display the JSON response
         st.json(results)
+
+        data = 'result'
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        filename = f"{data}_{timestamp}.pkl"
+
+        with open(filename, 'wb') as fp:
+            pickle.dump(results, fp)
 
         st.success("Document processed successfully!")
     except Exception as e:
