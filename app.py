@@ -39,12 +39,7 @@ if uploaded_file is not None:
             json.dump(results, json_file, indent=4)
 
         a,b,c,d,e,f,g,h,i,j,k,l = preprocessdata(results)
-        print(a)
-        print(b)
-        print(c)
-        print(d)
-        print(e)
-        print(f)
+        print(a,b,c,d,e,f,g,h,i,j,k,l)
 
         st.success("Document processed successfully!")
     except Exception as e:
