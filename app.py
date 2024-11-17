@@ -12,7 +12,7 @@ st.title("PDF Upload and Textract Processing")
 # Allow users to upload a PDF file
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
-bucket_name = 'inputfolder' 
+bucket_name = 'inputfolder2' 
 
 if uploaded_file is not None:
     object_name = uploaded_file.name  # Use the original file name
